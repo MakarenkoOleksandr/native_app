@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "native_app",
-    "slug": "native_app",
+    "slug": "native-app",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -15,7 +15,12 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSAppTransportSecurity": {
+          "NSAllowsArbitraryLoads": true
+        }
+      }
     },
     "android": {
       "adaptiveIcon": {
@@ -25,6 +30,12 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "2fbb4371-80a6-4145-8d55-aee86f11f9a8"
+      }
+    },
+    "owner": "smlsvkate"
   }
 }
